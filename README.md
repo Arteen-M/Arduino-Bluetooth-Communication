@@ -11,6 +11,7 @@ The Master Module must have the LCD Screen, and the Slave must have the temperat
 
 You also must Wire the LCD Screen and Temperature Sensor Yourself, here are some links for those:
 LCD: https://www.arduino.cc/en/Tutorial/LibraryExamples/HelloWorld
+
 Thermistor: https://thecustomizewindows.com/2020/10/temperature-sensor-using-ntc-thermistor-arduino-ntc/
 
 Note the ports used in the code for the LCD screen. Since ports 0 and 1 are used by the bluetooth module, ports d6 and d7 have been moved to ports 10 and 9 respectively
