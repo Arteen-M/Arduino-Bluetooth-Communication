@@ -16,4 +16,6 @@ LCD: https://www.arduino.cc/en/Tutorial/LibraryExamples/HelloWorld
 
 Thermistor: https://thecustomizewindows.com/2020/10/temperature-sensor-using-ntc-thermistor-arduino-ntc/
 
+This project doesn't use a Potentiometer, so you can instead wire the port connected to the potentiometer (V0) to port 6,and we will define the contrast manually
+
 Note the ports used in the code for the LCD screen. Since ports 0 and 1 are used by the bluetooth module, ports d6 and d7 have been moved to ports 10 and 9 respectively
