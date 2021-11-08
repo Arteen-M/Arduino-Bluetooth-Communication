@@ -7,9 +7,11 @@ This code assumes that all the AT-Command has been done already, if it hasn't, t
 https://howtomechatronics.com/tutorials/arduino/how-to-configure-pair-two-hc-05-bluetooth-module-master-slave-commands/
 
 The AT+UART? Command must return: +UART:38400,0,0. If it doesn't, use the command: AT+UART=38400
+
 The Master Module must have the LCD Screen, and the Slave must have the temperature sensor
 
 You also must Wire the LCD Screen and Temperature Sensor Yourself, here are some links for those:
+
 LCD: https://www.arduino.cc/en/Tutorial/LibraryExamples/HelloWorld
 
 Thermistor: https://thecustomizewindows.com/2020/10/temperature-sensor-using-ntc-thermistor-arduino-ntc/
