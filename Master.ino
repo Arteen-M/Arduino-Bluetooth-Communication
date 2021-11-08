@@ -7,33 +7,34 @@ int temp = 0;  // The Variable for Temperature
 
 void setup() {
   // put your setup code here, to run once:
-  analogWrite(6,Contrast);
-  Serial.begin(38400);
-  lcd.begin(16, 2);
+  analogWrite(6,Contrast); // Sets up the Contrast of the screen 
+  Serial.begin(38400); // Starts the Serial Communcation
+  lcd.begin(16, 2); // Starts the LCD Screen
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-   if (Serial.available() > 0) {
+  // Checks to see if any info from the other Arduino 
+  if (Serial.available() > 0) {
     temp = Serial.read();
-   }
-   else {
+  }
+  else {
     temp = "None";
-   }
-
-   Serial.println(temp);
+  }
    
-   lcd.clear();
-   lcd.setCursor(0, 0);
+   lcd.clear(); // Clears the Screen
+   lcd.setCursor(0, 0); // Sets it to write at position (0, 0)
+   // Doesn't print anything if it doesn't recieve anything (Checking connection)
    if (temp != "None") {
      lcd.print(((float(temp) - 32) * 5 / 9));
    }
-   lcd.print(" C");
-   lcd.setCursor(0, 1);
+   lcd.print(" C"); // Prints C for celcius 
+   lcd.setCursor(0, 1); // Sets the cursor the one row down
+   // Doesn't print anything if it doesn't recieve anything (Checking connection)
    if (temp != "None") {
      lcd.print(float(temp));
    }
-   lcd.print(" F");
+   lcd.print(" F"); // Prints F for Fahrenheit
 
    delay(100);
 }
